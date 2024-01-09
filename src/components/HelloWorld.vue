@@ -1,57 +1,61 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <strong>
+      VIVA VUE!!!
+    </strong>
+
   </div>
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  created() { console.log("created - Hola Mundo") },
+  beforeMount() { console.log("beforeMount - Hola Mundo") },
+  mounted() { console.log("mounted - Hola Mundo") },
+  beforeUpdate() { console.log("beforeUpdate - Hola Mundo") },
+  updated() { console.log("updated - Hola Mundo") },
+  activated() { console.log("activated - Hola Mundo") },
+  deactivated() { console.log("deactivated - Hola Mundo") },
+  beforeUnmount() { console.log("beforeUnmount - Hola Mundo") },
+  unmounted() { console.log("unmounted - Hola Mundo") },
+  errorCaptuted() { console.log("errorCaptured - Hola Mundo") },
+  renderTracked() { console.log("renderTracked - Hola Mundo") },
+  renderTriggered() { console.log("renderTriggered - Hola Mundo") },
+
+  props: { // propiedades
+    msg: String,
+  },
+  data() { // funcion que retorna un objeto
+    return {
+      // retorna un objeto
+      PrimeraPropiedad: "Miguel"
+    }
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  color: blue;
+}
+
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
